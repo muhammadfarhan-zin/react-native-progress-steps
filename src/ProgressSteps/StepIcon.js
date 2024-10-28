@@ -9,6 +9,7 @@ class StepIcon extends Component {
     if (this.props.isActiveStep) {
       styles = {
         circleStyle: {
+          justifyContent: 'center',
           width: 40,
           height: 40,
           borderRadius: 20,
@@ -19,7 +20,6 @@ class StepIcon extends Component {
         },
         circleText: {
           alignSelf: 'center',
-          top: 20 / 3,
         },
         labelText: {
           textAlign: 'center',
@@ -57,6 +57,7 @@ class StepIcon extends Component {
     } else if (this.props.isCompletedStep) {
       styles = {
         circleStyle: {
+          justifyContent: 'center',
           width: 36,
           height: 36,
           borderRadius: 18,
@@ -64,7 +65,6 @@ class StepIcon extends Component {
         },
         circleText: {
           alignSelf: 'center',
-          top: 18 / 2,
         },
         labelText: {
           textAlign: 'center',
@@ -153,7 +153,7 @@ class StepIcon extends Component {
         <View style={styles.circleStyle}>
           <Text style={styles.circleText}>
             {this.props.isCompletedStep ? (
-              <Text style={{ color: this.props.completedCheckColor }}>&#10003;</Text>
+              <Text style={{ color: this.props.completedCheckColor }}>&#10004;</Text>
             ) : (
               <Text style={styles.stepNum}>{this.props.stepNum}</Text>
             )}
